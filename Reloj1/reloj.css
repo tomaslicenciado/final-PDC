@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+  }
+  
+  .reloj{
+    position: absolute;
+    left: calc(50% - 400px);
+    top: calc(50% - 400px);
+    width: 800px;
+    height: 800px;
+  }

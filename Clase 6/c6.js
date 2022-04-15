@@ -57,12 +57,15 @@
         
         link2.append($("<br>"));
         
+
         var a = $("<a></a>");
         $(a).text= ("hipervinculo2");
         $(a).attr= ({"href":$("#texto2").val(), "target":"_blank"});
         link2.append(a);
         link2.append($("<br>"));
         
+
+
         link2.append($("<a></a>").text("hiperbinculo").attr({"href":$("#texto1").val(),"target":"_blanck"}));
         link2.append("<br>");
         
@@ -70,13 +73,53 @@
     }
 };*/
 
-var url = document.getElementById("url");
-var bt1 = document.getElementById("m1");
+var url = $('#url');
+var btn1 = $('#m1');
 
-$(bt1)[0].click(function(){
-    var link1 = document.getElementById("link");
-            
-    $(link1)[0].html["<h5> propiedad inner HTML </h5>",
-                "< a href = \" ",$(url).val(),"\"target = \"_blank\ ">
-                "hipervinculo1</a><br>"].join("");
+$(btn1).click(function () { 
+    if ($.trim($(url).val()) == ""){
+        alert("No hay url");
+        $(url).focus();
+        return;
+    }
+    if ($(url).val().toLowerCase().indexOf("http") < 0){
+        $(url).val(["https://",$(url).val()].join(""));
+    }
+    $('#link').html(["<h5> Método Inner HTML </h5>",
+                    "<a href=\" ",$(url).val(),"\"target =\"_blank\">Link con método 1</a><hr>"].join(""));
+});
+
+var btn2 = $('#m2');
+
+$(btn2).click(function () { 
+    if ($.trim($(url).val()) == ""){
+        alert("No hay url");
+        $(url).focus();
+        return;
+    }
+    if ($(url).val().toLowerCase().indexOf("http") < 0){
+        $(url).val(["https://",$(url).val()].join(""));
+    }
+    $('#link').append($('<h5></h5>').text("Método DOM en una línea"));
+    $('#link').append($("<a></a>").text("Link con método 2").attr({"href": $(url).val(), "target": "_blank"}));
+    $("#link").append($("<hr>"));
+});
+
+var btn3 = $('#m3');
+
+$(btn3).click(function () { 
+    if ($.trim($(url).val()) == ""){
+        alert("No hay url");
+        $(url).focus();
+        return;
+    }
+    if ($(url).val().toLowerCase().indexOf("http") < 0){
+        $(url).val(["https://",$(url).val()].join(""));
+    }
+    var a = $("<a></a>");
+    $('#link').append($('<h5></h5>').text("Método DOM con creación de variable"));
+    $(a).text("Link con método 3");
+    $(a).attr({"href": $(url).val(), "target": "_blank"});
+    $("#link").append(a);
+    $("#link").append($("<hr>"));
 });

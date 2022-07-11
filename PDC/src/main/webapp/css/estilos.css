@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+html{
+	background-color: rgb(163, 44, 58);
+	margin: 0px;
+	padding: 0px;
+}
+
+#pie{
+	background-color: rgb(163, 44, 58);
+	position: absolute;
+	bottom: 0;
+	width: 99%;
+	height: 20%;
+	color: white;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-image: url("https://www.ubp.edu.ar/wp-content/uploads/2021/06/01-banner-internas-2-1536x250.png");
+	z-index: -1;
+}
+
+.container{
+	margin: auto;
+	width: 75%;
+	height: 75%;
+	text-align: center;
+	background-color: rgb(252, 252, 213);
+	border: 20px solid rgb(252, 252, 213);
+}
+
+.simpleNumber::-webkit-outer-spin-button,
+.simpleNumber::-webkit-inner-spin-button{
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+#materias{
+	margin: auto;
+	width: 50%;
+}
+
+h1 {
+  color: rgb(163, 44, 58);
+  font-weight: bold;
+}
+
+.titulo{
+	font-family: Copperplate, fantasy;
+	text-decoration: underline double;
+	letter-spacing: 3px;
+}
+
+.btn-danger {
+    color: rgb(252, 252, 213);
+    background-color: rgb(163, 44, 58);
+    border-color: rgb(163, 44, 58);
+    font-size: large;
+    font-weight: bold;
+}
+
+.form-label {
+    font-size: large;
+    font-weight: bold;
+}
+
+.data{
+	display: grid;
+	grid-template-columns: auto auto;
+	background-color: rgb(163, 44, 58);
+}
+
+#personalData{
+	background-color: rgb(252, 252, 213);
+	border: 1px solid rgb(163, 44, 58);
+	margin: 5px;
+	padding: 5px;
+}
+
+#careerData{
+	background-color: rgb(252, 252, 213);
+	border: 1px solid rgb(163, 44, 58);
+	margin: 5px;
+	padding: 5px;
+}
+
+.cabecera{
+	display: grid;
+	grid-template-columns: auto auto auto;
+}

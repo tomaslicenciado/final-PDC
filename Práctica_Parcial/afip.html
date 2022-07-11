@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf8">
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="login" class="tabla">
+            <form>
+                <div id="titLogin" class="fila">
+                    <h3>Login</h3>
+                </div>
+                <div class="fila">
+                    <div id="user" class="columna">
+                        <label for="inputCuit">CUIT</label>
+                        <input type="text" name="inputCuit" id="inputCuit">
+                    </div>
+                    <div id="pass"class="columna">
+                        <label for="inputPass">Contraseña</label>
+                        <input type="password" name="inputPass" id="inputPass">
+                    </div>
+                </div>
+                <div id="btnLogin" class="fila">
+                    <input type="button" value="Ingresar" id="btnIngresar">
+                </div>
+            </form>
+        </div>
+        <div id="datosGenerales" class="tabla">
+            <div id="titDatos" class="fila">
+                <h3>Carga de comprobantes</h3>
+            </div>
+            <div class="fila">
+                <div id="tipoFact" class="columna">
+                    <label for="inputFactTipo">Factura</label>
+                    <select name="inputFactTipo" id="inputFactTipo">
+                        <option value="1">Factura A</option>
+                        <option value="2">Factura B</option>
+                        <option value="3">Factura C</option>
+                    </select>
+                </div>
+                <div id="fecha" class="columna">
+                    <label for="fechaFac">Fecha</label>
+                    <input type="date" name="fechaFac" id="fechaFac">
+                </div>
+            </div>
+        </div>
+        <div id="datosCliente" class="tabla">
+            <div class="fila">
+                <h5>Cliente</h5>
+            </div>
+            <div class="fila">
+                <div id="tdoc" class="columna">
+                    <label for="Tdocumento">Tipo</label>
+                    <select name="Tdocumento" id="Tdocumento">
+                        <option value="1">CUIT</option>
+                    </select>
+                </div>
+                <div id="ndoc" class="columna">
+                    <label for="ndocumento">Número</label>
+                    <input type="text" name="ndocumento" id="ndocumento">
+                </div>
+            </div>
+            <div class="fila">
+                <div id="name" class="columna">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div id="dir" class="columna">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" name="direccion" id="direccion">
+                </div>
+            </div>
+        </div>
+        <div id="compFactura" class="tabla">
+            <div class="fila">
+                <h5>Ítems</h5>
+            </div>
+            <div class="fila">
+                <table id="items">
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Descripción</th>
+                        <th>Importe Unitario</th>
+                        <th>% Descuento</th>
+                        <th>% Impuesto</th>
+                        <th>Monto</th>
+                        <th>Quitar</th>
+                        <th id="btnTh"><input type="button" value="+" id="btnAddItem"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script src="afip.js"></script>
+    </body>
+</html>
